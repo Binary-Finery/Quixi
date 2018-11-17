@@ -143,4 +143,11 @@ public class Quixi {
         SharedPreferences preferences  = PreferenceManager.getDefaultSharedPreferences(ctx);
         return preferences.getString(key, defaultValue);
     }
+
+    public static int wordCount(String string) {
+        String words = string.trim();
+        if (words.isEmpty())
+            return 0;
+        return words.split("\\s+").length;
+    }
 }
